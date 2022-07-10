@@ -12,12 +12,30 @@ function refundOrder(orderID, ordersArray ) {
   }
 }
 
+function listItems(deliveryOrders) {
+  var itemName = []
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    itemName.push(deliveryOrders[i].item);
+  }
+   return itemName.join(', ')
+}
+
+
+function searchOrder (deliveryOrders, items) {
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    if (deliveryOrders[i].item === items) {
+      return true
+    }
+  }
+return false
+}
+
 
 
 
 module.exports = {
   takeOrder,
   refundOrder,
-  // listItems,
-  // searchOrder
+  listItems,
+   searchOrder
 }
