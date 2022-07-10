@@ -13,18 +13,28 @@
 // var type = "Dessert";
 // var inStock = 10
 
+var food = "tacos";
+var type = "amazing";
+var inStock = 100;
 
 
-// Reassign (not initialize) your "inStock" variable from above. We got a new shipment! Use a built in math operator to make 
+
+// Reassign (not initialize) your "inStock" variable from above. We got a new shipment! Use a built in math operator to make
 // the inStock count double what it currently is.
 
+inStock = 100 + 50;
 
-// Reassign (not initialize) your "inStock" variable from above. You got hungry and needed a snack! 
+
+// Reassign (not initialize) your "inStock" variable from above. You got hungry and needed a snack!
 // Use a built in math operator to decrement the inStock count by 1.
+
+inStock = 150 - 1;
 
 
 // Initialize a new variable "isFavorite", and assign it to a boolean value indicating
 // if the food you chose is your favorite food or not
+
+var isFavorite = true;
 
 
 
@@ -33,16 +43,21 @@
 // variable should be true, otherwise it should be false. You MUST use a
 // comparison operator.
 
-
+var shouldOrderMore = inStock < 20;
 
 //------------------------- Conditionals -------------------------//
 
 
 
 // Express the following in code: If the variable "stockCount" is greater or equal to 1, log
-// the statement 'I'm going to eat some [food]!', otherwise, log the statement 
+// the statement 'I'm going to eat some [food]!', otherwise, log the statement
 // 'We need to get some more [food].'
 
+if (stockCount >= 1) {
+  console.log("I'm going to eat some tacos!");
+} else {
+  console.log("We need to get more tacos");
+}
 
 
 // Express the following in code: If the variable "isFavorite" is true,
@@ -50,7 +65,11 @@
 // statement 'I recently ate [food]'. In either case, the value stored in
 // the "food" variable should be included in the logged statement.
 
-
+if (isFavorite === true) {
+  console.log("My favorite food is tacos");
+} else {
+  console.log("I recently ate tacos");
+}
 
 //------------------------- Arrays -------------------------//
 
@@ -58,16 +77,21 @@
 // Create a new variable "vegetables" and assign it to an Array of 5 different
 // vegetables, represented by their names as Strings.
 
+var vegetables = ["tomato", "onion", "cactus", "cilantro", "chile"];
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
 
+console.log(vegetables[2]);
 
 // Create a new variable "fruits" and assign it to an Array of 7
 // different fruits.
 
+var fruits = ['mango", "guava", "mamey", "lime", "pear", "papaya", "pineapple"];
 
 // Write the code to access the 5th element of the array, using bracket notation.
+
+console.log(fruits[4]);
 
 
 //------------------------- Objects -------------------------//
@@ -76,7 +100,12 @@
 // keys: name, and isOpen. The value for name should the string 'King Soopers' (or your favorite grocery store), and
 // the value for isOpen should be true. Which other key value pairs would make sense to add to this object?
 
-
+var groceryStore = {
+    name: "Chedraui",
+    isOpen: true
+};
 
 // Write the code to add the key of location, with the value of 'Denver, Colorado'. Use dot
 // notation to do this. DO NOT modify your code from above.
+
+groceryStore.location = "Denver, Colorado";
